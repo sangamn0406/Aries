@@ -1,0 +1,49 @@
+.features-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.heading {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.tilt-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: transform 0.5s ease-in-out; /* Adjusted transition property */
+}
+
+.card-one {
+  margin-bottom: 20px;
+  height: 200px;
+  background: url("../../assets/features_1.png") center/cover no-repeat;
+  width: 200px;
+  &:hover {
+    transform: perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+  }
+}
+
+.card-two {
+  height: 230px;
+  width: 230px;
+  background: url("../../assets/socials.png") center/cover no-repeat;
+  margin-top: 20px;
+  &:hover {
+    transform: perspective(75em) rotateX(18deg);
+  }
+}
+
+.card-three {
+  margin-bottom: 20px;
+  height: 200px;
+  background: url("../../assets/convo.png") center/cover no-repeat;
+  width: 200px;
+  &:hover {
+    transform: perspective(800px) rotateY(25deg) rotateX(10deg);
+  }
+}
