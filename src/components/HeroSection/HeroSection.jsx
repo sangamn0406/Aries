@@ -1,22 +1,27 @@
 import React from "react";
 import "./HeroSection.css";
+import bg from "../../assets/bg.png";
+import iphone from "../../assets/iphone2.png";
 
 const HeroSection = () => {
   return (
-    <div>
-      <div className="px-4 pt-3 my-5 text-center">
-        <h1 className="fw-bold">
-          Next-Gen AI Solutions for eCommerce Success{" "}
-        </h1>
-        <div className="col-lg-6 mx-auto">
-          <p className="lead mb-4">
-            Leverage AI-Powered Solutions to Supercharge Your eCommerce Sales
-            and Marketing Efforts, and Watch Your Business Thrive
-          </p>
-        </div>
+    <div className="hero-section" style={{  }}>
+          <div>
+      <div className="container">
+        <div className="content"></div>
       </div>
+      <div className="iphone-container">
+        <img src={iphone} alt="Tilted iPhone" />
+      </div>
+      {/* Adding three independently positioned boxes */}
+      <div className="box box1">SOCIAL SAGE</div>
+      <div className="box box2">PICTURE PERFECT</div>
+      <div className="box box3">BLOG GENIE</div>
+    </div>
+      
     </div>
   );
 };
 
 export default HeroSection;
+

@@ -1,49 +1,88 @@
-.features-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.heading {
-  margin-bottom: 10px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: black;
+/* General heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Julius Sans One", sans-serif;
+  margin-bottom: 20px;
 }
 
-.tilt-container {
+/* Container for the card layout */
+.card-container {
+  position: relative;
   display: flex;
-  align-items: center;
+  justify-content: center; /* Center the cards in the container */
+  align-items: flex-start; /* Align cards at the start */
+  width: 70%;
+  height: 50vh;
+  z-index: 2;
+  margin: 0px 14%; /* Add margin for spacing */
+}
+
+/* Individual card styles */
+.card-1 {
+  width: 280px; /* Width of each card */
+  height: 100%; /* Height of each card */
+  position: relative;/* Margin around each card */
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
   justify-content: center;
-  border-radius: 1rem;
-  transition: transform 0.5s ease-in-out; /* Adjusted transition property */
+  align-items: center;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  transition: transform 0.3s; /* Add transition for scaling effect */
 }
 
-.card-one {
-  margin-bottom: 20px;
-  height: 200px;
-  background: url("../../assets/features_1.png") center/cover no-repeat;
-  width: 200px;
-  &:hover {
-    transform: perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+/* Content within the card */
+.card-1 .content {
+  padding: 20px;
+  transition: 0.8s all ease;
+  color: #ccc; /* Text color */
+  transform: translateY(200px); /* Initial position */
+  opacity: 0; /* Initially hidden */
+}
+
+/* Show content on hover */
+.card-1:hover .content {
+  transform: translateY(0px); /* Bring to view */
+  opacity: 1; /* Make visible */
+}
+
+/* Card image styles */
+.card-1 img {
+  position: absolute;
+  width: 100%; /* Full width */
+  z-index: -1; /* Send to back */
+}
+
+/* Specific styles for h1 within cards */
+.card-1 .content h2 {
+  color: #000; /* Heading color */
+  font-weight: 400;
+}
+
+/* Styles for the link/button in the card */
+
+
+/* Button hover effect */
+
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 900px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center align */
   }
 }
 
-.card-two {
-  height: 230px;
-  width: 230px;
-  background: url("../../assets/socials.png") center/cover no-repeat;
-  margin-top: 20px;
-  &:hover {
-    transform: perspective(75em) rotateX(18deg);
-  }
-}
-
-.card-three {
-  margin-bottom: 20px;
-  height: 200px;
-  background: url("../../assets/convo.png") center/cover no-repeat;
-  width: 200px;
-  &:hover {
-    transform: perspective(800px) rotateY(25deg) rotateX(10deg);
+/* Ensure cards are on a single line */
+@media only screen and (min-width: 901px) {
+  .card-container {
+    justify-content: space-between; /* Distribute space between cards */
   }
 }

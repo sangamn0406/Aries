@@ -1,41 +1,41 @@
 import React from "react";
-import logo from "../../assets/undefined - Imgur.png";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <div>
-      <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
+    <div style={{ backgroundColor: "#3e2b47" }}> {/* Darker background */}
+      <div className="container">
+        <footer className="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-top">
+          <div className="col-md-4 d-flex align-items-center">
             <a
               href="/"
-              class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+              className="mb-3 me-2 mb-md-0 text-decoration-none lh-1"
             >
               <img
                 src={logo}
-                alt=""
-                style={{ height: "30px", width: "50px" }}
+                alt="Company Logo"
+                style={{ height: "40px", width: "auto" }}
               />
             </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">
+            <span className="mb-3 mb-md-0" style={{ color: "#ffffff" }}>
               © 2024 Company, Inc
             </span>
           </div>
 
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="text-body-secondary" href="#">
-                <i class="bi bi-facebook"></i>
+          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li className="ms-3">
+              <a className="text-decoration-none" href="#">
+                <i className="bi bi-facebook" style={{ fontSize: "24px", color: "#956098" }}></i>
               </a>
             </li>
-            <li class="ms-3">
-              <a class="text-body-secondary" href="#">
-                <i class="bi bi-instagram"></i>
+            <li className="ms-3">
+              <a className="text-decoration-none" href="#">
+                <i className="bi bi-instagram" style={{ fontSize: "24px", color: "#956098" }}></i>
               </a>
             </li>
-            <li class="ms-3">
-              <a class="text-body-secondary" href="#">
-                <i class="bi bi-medium"></i>
+            <li className="ms-3">
+              <a className="text-decoration-none" href="#">
+                <i className="bi bi-medium" style={{ fontSize: "24px", color: "#956098" }}></i>
               </a>
             </li>
           </ul>

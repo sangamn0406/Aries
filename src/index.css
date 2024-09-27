@@ -17,7 +17,7 @@ code {
     monospace;
 }
 .hero-background {
-  background: url("./assets/Desktop\ -\ 1.png") center/cover no-repeat;
+  background: url("./assets/aaa.png") center/cover no-repeat;
   height: 100vh;
 }
 ::-webkit-scrollbar {
